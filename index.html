@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS GAME
+    </title>
+    <style>
+    h1{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }    
+.container{
+  max-width: 440px; /* Adjusted to ensure container adapts to different screen sizes */
+  height: auto; /* Allow height to adjust based on content */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #ad2bd147;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  margin: 0 auto;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 0px 15px rgba(118, 98, 119, 0.81); /* Box shadow */
+}
+@media screen and (min-width: 601px) {
+  .container {
+    max-width: 440px; /* Adjust max-width for screens greater than 600px */
+    margin: 0 auto;
+    margin-top: 80px;
+  
+}
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 82%; /* Adjusted width for screens smaller than 600px */
+    max-width: none; /* reset max-width for smaller screens */
+    min-width: auto; /* reset min-width for smaller screens */
+    margin: 0 auto;
+    margin-top: 50px;;
+  }
+}
+.Choice {
+  width: 200px; /* Adjusted to make it responsive */
+  max-width: 200px; /* Added to prevent items from becoming too wide on larger screens */
+  height: auto; /* Allow height to adjust based on content */
+  margin: 10px;
+  text-align: center; /* Corrected property name */
+  background-color: #c47dd7e2;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 0px 15px rgba(142, 118, 142, 0.81); /* Box shadow */
+}
+
+#computers-choice, #your-choice {
+  text-align: center;
+  font-size: 2rem; /* Changed to relative units for better responsiveness */
+  font-weight: 800;
+}
+
+.Result {
+  width: 100%; 
+  max-width: 420px; /* Added to prevent items from becoming too wide on larger screens */
+  height: auto; /* Allow height to adjust based on content */
+  background-color: #c086d0e2;
+  margin: 10px;
+  text-align: center;
+  font-size: 2.5rem; /* Changed to relative units for better responsiveness */
+  font-weight: 700;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 0px 15px rgba(77, 57, 83, 0.69); /* Box shadow */
+}
+button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; 
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: #c59bd1e2;
+  margin-left: 23px;
+  margin-right: 23px;
+   
+  cursor: pointer;
+  transition: transform 0.5s;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 0px 15px rgba(149, 122, 144, 0.81); /* Box shadow */
+}
+
+
+.button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#Rock {
+  background-image: url('https://5.imimg.com/data5/MS/JA/MY-51522116/dolomite-500x500.jpg');
+  background-size: cover; /* Resize image to cover button */
+}
+
+#Paper {
+  background-image: url('https://thumbs.dreamstime.com/b/old-paper-sheet-white-shadow-35056911.jpg');
+  background-size: cover; /* Resize image to cover button */
+}
+
+#Scissor {
+  background-image: url('https://img.freepik.com/free-vector/purple-scissor-sticker-white-background_1308-61999.jpg');
+  background-size: cover; /* Resize image to cover button */
+}
+
+
+.button:focus {
+  outline: none;
+}
+
+.button.active {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 440px) {
+  .Choice, .Result {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>Rock/Paper/Scissor Game</h1>
+    <div class="container">
+    <p class="Choice">Users Choice: <span id="your-choice" ></span></p>
+    <p class="Choice">Computers Choice: <span id="computers-choice" ></span></p>
+    <p  class="Result"><span id="result"></span></p>
+    <button class="button" id="Rock" >Rock</button>
+    <button class="button" id="Paper" >Paper</button>
+    <button class="button" id="Scissor" >Scissor</button>
+</div>
+ <script src="script.js" charset="UTF-8"></script>   
+</body>
+</html>
